@@ -1,0 +1,35 @@
+import java.util.*;
+
+/**
+ * This program checks that the asked point is inside or outside of the rectangle, 
+ * or we have an input error in the rectangle. 
+ * @author TIMEA SZABO - 0992759, VAHE ABRAHAMIAN - 0992759
+ * 25-04-2016
+ */
+public class Rectangle {
+  Scanner sc = new Scanner(System.in);    
+  
+  void askedPointIsInRectangle() {   
+    int rectangleLeft, rectangleTop, rectangleRight, rectangleBottom, askedPointX, askedPointY;
+    
+    rectangleLeft = sc.nextInt();
+    rectangleTop = sc.nextInt();
+    rectangleRight = sc.nextInt();
+    rectangleBottom = sc.nextInt();
+    askedPointX = sc.nextInt();
+    askedPointY = sc.nextInt();
+    
+    if ((rectangleBottom > rectangleTop) || (rectangleLeft > rectangleRight)) {
+      System.out.println("error");
+    } else if ((rectangleBottom <= askedPointX) && (askedPointX <= rectangleTop) && 
+               (rectangleLeft <= askedPointY) && (askedPointY <= rectangleRight)) {
+      System.out.println("inside");
+    } else {
+      System.out.println("outside");
+    }
+  }
+
+  public static void main(String[] args) {
+    new Rectangle().askedPointIsInRectangle();
+  }  
+}
