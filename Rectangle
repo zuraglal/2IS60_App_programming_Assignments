@@ -3,32 +3,38 @@ import java.util.*;
 /**
  * This program checks that the asked point is inside or outside of the rectangle, 
  * or we have an input error in the rectangle. 
- * @author TIMEA SZABO - 0992759, VAHE ABRAHAMIAN - ⁠⁠⁠⁠⁠⁠0905371
+ * @author TIMEA SZABO - 0992759 & VAHE ABRAHAMIAN - 0905371
  * 25-04-2016
  */
 public class Rectangle {
-  Scanner sc = new Scanner(System.in);    
+  Scanner sc = new Scanner(System.in); // enables console input via Scanner
   
   void askedPointIsInRectangle() {   
-    int rectangleLeft, rectangleTop, rectangleRight, rectangleBottom, askedPointX, askedPointY;
+    int rectangleLeft, rectangleTop, //the x and y coordinate of the top left corner
+      rectangleRight, rectangleBottom, //the x and y coordinate of the bottom right corner
+      askedPointX, askedPointY; //the x and y coordinate of the asked point
     
-    rectangleLeft = sc.nextInt();
+    // inputs from console
+    rectangleLeft = sc.nextInt(); 
     rectangleTop = sc.nextInt();
     rectangleRight = sc.nextInt();
     rectangleBottom = sc.nextInt();
     askedPointX = sc.nextInt();
     askedPointY = sc.nextInt();
     
-    if ((rectangleBottom > rectangleTop) || (rectangleLeft > rectangleRight)) {
-      System.out.println("error");
-    } else if ((rectangleBottom <= askedPointX) && (askedPointX <= rectangleTop) && 
-               (rectangleLeft <= askedPointY) && (askedPointY <= rectangleRight)) {
-      System.out.println("inside");
+    if (((rectangleBottom >= rectangleTop)) || ((rectangleLeft >= rectangleRight))) {
+      // the rectangle is ill-defined
+      System.out.println("error"); // gives error message if rectangle is ill-defined
+    } else if ((rectangleLeft <= askedPointX) && (askedPointX <= rectangleRight) && 
+               (rectangleBottom <= askedPointY) && (askedPointY <= rectangleTop)) {
+      // the asked point is inside of the rectangle
+      System.out.println("inside"); // the output message if the asked point is inside of the rectangle
     } else {
-      System.out.println("outside");
+      // the asked point is outside of the rectangle
+      System.out.println("outside"); // the output message if the asked point is outside of the rectangle
     }
   }
-
+  // start-up code
   public static void main(String[] args) {
     new Rectangle().askedPointIsInRectangle();
   }  
