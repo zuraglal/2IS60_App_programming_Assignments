@@ -22,7 +22,7 @@ public class Rectangle {
     askedPointX = sc.nextInt();
     askedPointY = sc.nextInt();
     
-    if (((rectangleBottom >= rectangleTop)) || ((rectangleLeft >= rectangleRight))) {
+    if ((rectangleBottom >= rectangleTop) || (rectangleLeft >= rectangleRight)) {
       // the rectangle is ill-defined
       System.out.println("error"); // gives error message if rectangle is ill-defined
     } else if ((rectangleLeft <= askedPointX) && (askedPointX <= rectangleRight) && 
