@@ -24,6 +24,6 @@ public class Pythagoras {
     }
     // start-up code
     public static void main(String[] args) {
-        (new Pythagoras()).computeHypothenuse();
+        new Pythagoras().computeHypothenuse();
     }  
 }
