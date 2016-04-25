@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * This program checks that the asked point is inside or outside of the rectangle, 
  * or we have an input error in the rectangle. 
- * @author TIMEA SZABO - 0992759 and VAHE ABRAHAMIAN - 0905371
+ * @author TIMEA SZABO (0992759) and VAHE ABRAHAMIAN (0905371)
  * @since 25-04-2016
  */
 public class Rectangle {
