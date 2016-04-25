@@ -9,10 +9,10 @@ import java.util.*; // provides Scanner description
 public class Pythagoras {
     Scanner sc = new Scanner (System.in); // enables console input via Scanner
     int a; // side a
-    int b; // side a
+    int b; // side b
     double c; // side c
         
-    void computeHypothenuse(){
+    void computeHypothenuse() {
         System.out.println("Give length of side a");
         a = sc.nextInt(); // inputs side a from console
 
@@ -22,6 +22,7 @@ public class Pythagoras {
         c = Math.sqrt(a * a + b * b); // calculate side c with Pythagoras
         System.out.println("Side c has length " + c); // output message with the result
     }
+    
     // start-up code
     public static void main(String[] args) {
         new Pythagoras().computeHypothenuse();
